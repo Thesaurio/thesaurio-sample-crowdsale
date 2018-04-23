@@ -61,7 +61,7 @@ contract SampleCrowdsale is MintedCrowdsale, FiatCompatible, KycCompatible, Thes
     return _weiAmount.ethdiv(fiatPrices.eurPrice().mul(rate));
   }
 
-  function distributionInfo() public constant returns (
+  function distributionInfo() public view returns (
     uint256 minimumContribution,
     uint256 maximumContribution,
     uint256 currentTokenPrice,
